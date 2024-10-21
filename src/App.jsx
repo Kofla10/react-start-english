@@ -24,7 +24,11 @@ function App() {
         <section id='examples'>
           <h2>Examples</h2>
           <menu>
-            <TabButton test='camilo'>Components</TabButton>
+            {/* <TabButton test='camilo'>Components</TabButton> */}
+            <TabButton label='Componente'/>
+            <TabButton label='JSX'/>
+            <TabButton label='Props'/>
+            <TabButton label='State'/>
           </menu>
         </section>
 
@@ -34,3 +38,6 @@ function App() {
 }
 
 export default App;
+
+
+

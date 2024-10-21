@@ -1,11 +1,16 @@
 import './TabButton.css'
 
-const TabButton = (props) => {
-    console.log(props);
-    
+// const TabButton = ({children}) => {
+const TabButton = ({label}) => {
+  // console.log(props);
+
+  const handleClick = () => {
+    console.log('this is a test');
+
+  }
   return (
     <li>
-        <button>{ props.children }</button>
+        <button onClick={ handleClick }>{ label }</button>
     </li>
   )
 }
