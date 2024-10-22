@@ -1,7 +1,7 @@
 import './TabButton.css'
 
 // const TabButton = ({children}) => {
-const TabButton = ({label}) => {
+const TabButton = ({label, onSelect}) => {
   // console.log(props);
 
   const handleClick = () => {
@@ -10,7 +10,7 @@ const TabButton = ({label}) => {
   }
   return (
     <li>
-        <button onClick={ handleClick }>{ label }</button>
+        <button onClick={ onSelect }>{ label }</button>
     </li>
   )
 }

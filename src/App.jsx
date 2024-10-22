@@ -5,6 +5,10 @@ import {CORE_CONCEPTS} from './data/data';
 
 function App() {
 
+  const handleselect = (selectedButton)  => {
+    console.log('handle select ' + selectedButton);
+  }
+
   return (
     <div>
       <Header/>
@@ -25,10 +29,10 @@ function App() {
           <h2>Examples</h2>
           <menu>
             {/* <TabButton test='camilo'>Components</TabButton> */}
-            <TabButton label='Componente'/>
-            <TabButton label='JSX'/>
-            <TabButton label='Props'/>
-            <TabButton label='State'/>
+            <TabButton onSelect ={ () => handleselect('componente') } label='Componente'/>
+            <TabButton onSelect ={ () => handleselect('jsx') } label='JSX'/>
+            <TabButton onSelect ={ () => handleselect('props') } label='Props'/>
+            <TabButton onSelect ={ () => handleselect('state') } label='State'/>
           </menu>
         </section>
 
