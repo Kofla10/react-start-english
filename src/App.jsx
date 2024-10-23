@@ -13,9 +13,21 @@ function App() {
     setSelectTopict(selectedButton);
   }
 
-    // console.log(EXAMPLES[selectTopict])
-    // const {title, description, code} = EXAMPLES[selectTopict];
+  let topic = <p>Please select a topic.</p>;
 
+  if(selectTopict){
+    topic =  (
+        <div className = 'tab-context'>
+          <h3>{EXAMPLES[selectTopict].title}</h3>
+          <p>{EXAMPLES[selectTopict].description}</p>
+          <pre>
+            <code>
+              {EXAMPLES[selectTopict].code}
+            </code>
+          </pre>
+        </div>);
+
+  }
   return (
     <div>
       <Header/>
@@ -41,7 +53,7 @@ function App() {
             <TabButton onSelect = { () => handleselect('props') } label      = 'Props'/>
             <TabButton onSelect = { () => handleselect('state') } label      = 'State'/>
           </menu>
-          {!selectTopict ? <p>Please select a topic.</p>: null}
+          {/* {!selectTopict ? <p>Please select a topic.</p>: null}
           {selectTopict ?<div className = 'tab-context'>
             <h3>{EXAMPLES[selectTopict].title}</h3>
             <p>{EXAMPLES[selectTopict].description}</p>
@@ -50,7 +62,8 @@ function App() {
                 {EXAMPLES[selectTopict].code}
               </code>
             </pre>
-          </div>:null}
+          </div>:null} */}
+          {topic}
         </section>
       </main>
     </div>

@@ -11,7 +11,7 @@ const TabButton = ({label, onSelect}) => {
   }
   return (
     <li>
-        <button onClick={ onSelect }>{ label }</button>
+        <button className={} onClick={ onSelect }>{ label }</button>
     </li>
   )
 }
