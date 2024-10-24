@@ -1,7 +1,7 @@
 import './TabButton.css'
 
 // const TabButton = ({children}) => {
-const TabButton = ({label, onSelect}) => {
+const TabButton = ({label, onSelect, isSelected}) => {
   // console.log(props);
   console.log('TABBUTTON COMPONENT EXWCUTING');
   
@@ -11,7 +11,7 @@ const TabButton = ({label, onSelect}) => {
   }
   return (
     <li>
-        <button className={} onClick={ onSelect }>{ label }</button>
+        <button className={isSelected ? 'active': undefined} onClick={ onSelect }>{ label }</button>
     </li>
   )
 }

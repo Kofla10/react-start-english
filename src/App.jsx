@@ -48,10 +48,10 @@ function App() {
           <h2>Examples</h2>
           <menu>
             {/* <TabButton test='camilo'>Components</TabButton> */}
-            <TabButton onSelect = { () => handleselect('components') } label = 'Componente'/>
-            <TabButton onSelect = { () => handleselect('jsx') } label        = 'JSX'/>
-            <TabButton onSelect = { () => handleselect('props') } label      = 'Props'/>
-            <TabButton onSelect = { () => handleselect('state') } label      = 'State'/>
+            <TabButton onSelect = { () => handleselect('components') } label = 'Componente' isSelected={selectTopict === 'components'}/>
+            <TabButton onSelect = { () => handleselect('jsx') }        label = 'JSX'        isSelected={selectTopict === 'jsx'}/>
+            <TabButton onSelect = { () => handleselect('props') }      label = 'Props'      isSelected={selectTopict === 'props'}/>
+            <TabButton onSelect = { () => handleselect('state') }      label = 'State'      isSelected={selectTopict === 'state'}/>
           </menu>
           {/* {!selectTopict ? <p>Please select a topic.</p>: null}
           {selectTopict ?<div className = 'tab-context'>
